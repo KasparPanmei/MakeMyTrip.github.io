@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MakeMyTrip - #1 Travel Website</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="icon" href="download.png">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+</head>
+<style>
+    *
+{
+    font-family: 'Inconsolata', monospace;
+    scroll-behavior: smooth;
+}
+.bg-img
+{
+    background-image: url(bg-img.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: inherit;
+}
+.topbar
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.topbar
+{
+    background-color: rgb(128, 117, 117);
+}
+.topbar p a img
+{
+    width: 30px;
+}
+.contents
+{
+    color: white;
+    margin-left: -50px;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+.contents h6
+{
+    line-height: 10px
+}
+.contents p
+{
+    font-size: 11px;
+    line-height: 2px;
+}
+.navbar
+{
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.navbar-nav
+{
+    margin: auto;
+}
+#logo img
+{
+    margin-top: 10px;
+    width: 200px;
+    background-color: rgb(128, 117, 117);
+    padding: 10px;
+    border-radius: 10px;
+}
+.nav-item
+{
+    margin-right: 30px;
+    color: white;
+    text-align: center;
+}
+.nav-item a
+{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.nav-item a:hover
+{
+    color: rgb(10, 168, 183);
+}
+#icons img
+{
+    color: white;
+    width: 30px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+}
+form
+{
+    display: flex;
+    flex-direction: row; 
+}
+.row
+{
+    background-color: aliceblue;
+    padding: 10px;
+}
+.row img
+{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.flex
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.form-check
+{
+    background-color: grey;
+    padding: 5px;
+    border-radius: 10px;
+    font-weight: bolder;
+}
+.static
+{
+    border: 1px solid white;
+    width: 200px;
+    background-color: white;
+    padding: 5px;
+    position: fixed;
+    border-radius: 15px;
+    text-align: center;
+    right: 50px;
+}
+.static img
+{
+    width: 50px;
+}
+.static a
+{
+    text-decoration: none;
+}
+.static span
+{
+    font-weight: bold;
+}
+.col a
+{
+    text-decoration: none;
+    color: black;
+}
+.col a:hover
+{
+    color: black;
+}
+#new-row
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    cursor: pointer;
+}
+#new-col
+{
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 10px;
+}
+#new-col:hover
+{
+    background-color: aliceblue;
+}
+.btn a
+{
+    border-radius: 50%;
+}
+.new-flex
+{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.card-text img
+{
+    margin: 5px;
+    width: 150px;
+}
+.card-title 
+{
+    color: rgb(0, 0, 0);
+}
+#shimla img
+{
+    height: 90px;
+}
+footer
+{
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color: rgba(147, 146, 146, 0.493) ;
+}
+.aboutthem
+{
+    margin: 20px;
+}
+.aboutthem a
+{
+    text-decoration: none;
+    color: black;
+}
+.aboutthem a:hover
+{
+    text-decoration: none;
+    color: blue;
+}
+.s-footer
+{
+    background-color: rgba(241, 244, 248, 0.549);
+    display: flex;
+    margin: 20px;
+    padding: 10px;
+    text-align: justify;
+}
+.s-footer h5
+{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+s.footer p
+{
+    font-size: 15px;
+}
+.why-book
+{
+    margin-right:20px;
+}
+.what-offers
+{
+    margin-right: 20px;
+}
+.social-links
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 50px;
+    margin-top: -20px;
+}
+.social-links img
+{
+    width: 40px;
+    margin: 5px;
+}
+.back-to-top a
+{
+    text-decoration: none;
+    color: white;
+}
+.copyright p
+{
+    line-height: 5px;
+    color: white;
+}
+@media(max-width:280.98px)
+{
+    .topbar img
+    {
+        width: 100px;
+    }
+    .contents p
+    {
+        font-size: 8px;
+        line-height: 10px;
+    }
+    .social-links
+    {
+        display: block;
+    }
+    .copyright p
+    {
+        font-size: 10px;
+    }
+}
+@media(max-width:376px)
+{
+    .topbar img
+    {
+        width: 100px;
+    }
+    .topbar p a img
+    {
+        width: 20px;
+    }
+    .contents
+    {
+        margin-left: 20px;
+    }
+    .contents h6
+    {
+        font-size: 13px;
+    }
+    .s-footer
+    {
+        display: block;
+    }
+    .s-footer
+    {
+        display: block;
+    }
+    .social-links
+    {
+        display: block;
+    }
+    .back-to-top
+    {
+        margin-bottom: 10px;
+    }
+}
+@media (max-width:1245.98px)
+{
+    .static
+    {
+        border: 1px solid white;
+        width: 150px;
+        background-color: white;
+        padding: 0px;
+        position: fixed;
+        border-radius: 15px;
+        text-align: center;
+        bottom: 10px;
+    }
+    .static img
+    {
+        width: 15px;
+    }
+    .static a
+    {
+        text-decoration: none;
+    }
+    .static span
+    {
+        font-weight: bold;
+    }
+}
+@media (min-width:377px) and (max-width:570px)
+{
+    .topbar img
+    {
+        width: 100px;
+    }
+    .topbar p a img
+    {
+        width: 20px;
+    }
+    .contents
+    {
+        margin-left: 20px;
+    }
+    .contents h6
+    {
+        font-size: 13px;
+    }
+    .s-footer
+    {
+        display: block;
+    }
+    .social-links
+    {
+        display: block;
+    }
+    .back-to-top
+    {
+        margin-bottom: 10px;
+    }
+}
+@media (min-width:570px) and (max-width:604px)
+{
+    .topbar img
+    {
+        width: 100px;
+    }
+    .topbar p a img
+    {
+        width: 20px;
+    }
+    .contents
+    {
+        margin-left: 20px;
+    }
+    .contents h6
+    {
+        font-size: 13px;
+    }
+}
+</style>
+<body>
+    <div class="bg-img">
+        <div id="tp"></div>
+    <div class="topbar">
+        <div id="bg-color">
+            <img src="mmtLogoWhite.png" alt="logo">
+        </div>
+        <div class="first-col">
+            <p>
+                <a href="#">
+                    <img src="cloud-download-fill.svg" alt="download-app">
+                </a>
+            </p>
+        </div>
+        <div class="contents">
+            <p>
+                <h6>Download the</h6>
+                <h6>App</h6>
+            </p>
+            <p>Get exiting</p>
+            <p>welcome offer</p>
+        </div>
+        <div class="second-col">
+            <p>
+                <a href="https://supportz.makemytrip.com/Mima/BookingSummary/">
+                    <img src="briefcase-fill.svg" alt="bag">
+                </a>
+            </p>
+        </div>
+        <div class="contents">
+            <p>
+                <h6>My Trips</h6>
+            </p>
+            <p>Manage Your</p>
+            <p>wBooking</p>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <a class="navbar-brand" href="#" id="logo">
+                    <img src="mmtLogoWhite.png" alt="mmtlogo">
+                </a>
+                <ul class="navbar-nav"  id="icons">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">
+                        <img src="airplane.png" alt="flights">
+                    </a>
+                    <a href="https://www.makemytrip.com/flights/">Flights</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <img src="resort.png" alt="hotels">
+                    </a>
+                    <a href="https://www.makemytrip.com/hotels/">Hotels</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <img src="holiday-packages.png" alt="holiday-packages">
+                    </a>
+                    <a href="https://www.makemytrip.com/holidays-india/">
+                        Holiday Packages
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <img src="train.png" alt="trains">
+                    </a>
+                    <a href="https://www.makemytrip.com/railways/">Trains</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <img src="taxi-cab.png" alt="trains">
+                    </a>
+                    <a href="https://www.makemytrip.com/cabs/">Cabs</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </div>
+    <div class="container">
+        <div class="box">
+            <div class="card">
+                <div class="card-body">
+                    <div class="container text-center">
+                        <div class="row">
+                          <div class="col order-last">
+                            <a href="">
+                                <img src="Travel-Guides.png" alt="Guidelines">
+                                Travel Guidelines
+                            </a>
+                            <a href=""><hr></a>
+                          </div>
+                          <div class="col order-last">
+                            <a href="">
+                                <img src="Featured.jpg" alt="features">
+                                Featured
+                            </a>
+                            <a href=""><hr></a>
+                          </div>
+                          <div class="col order-last">
+                            <a href="">
+                                <img src="Super-Deals.jpg" alt="deals">
+                                Super Deals
+                            </a>
+                            <a href=""><hr></a>
+                          </div>
+                          <div class="col">
+                            <a href="">
+                                <img src="Destination.jpg" alt="Destination">
+                                Destinations
+                            </a>
+                            <a href=""><hr></a>
+                          </div>
+                          <div class="col order-first">
+                            <a href="">
+                                <img src="search.svg" alt="search">
+                                Search
+                            </a>
+                            <a href=""><hr></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1">One Way</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="inlineRadio2">Round Trip</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" >
+                            <label class="form-check-label" for="inlineRadio3">Multi City</label>
+                          </div>
+                          <div class="book">
+                            <h4>Book International and Domestic Flights</h4>
+                          </div>
+                      </div>
+                      <div class="container">
+                        <div class="row" id="new-row">
+                          <div class="col" id="new-col">
+                            <a href="">
+                                <h5>From City</h5>
+                            <h2><b>New Delhi</b></h2>
+                            <h6>India</h6>
+                            </a>
+                          </div>
+                          <div class="col" id="new-col">
+                            <a href="">
+                                <h5>TO City / Country</h5>
+                                <h2><b>Search Destination</b></h2>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                  <a href="#" class="btn btn-primary">Search</a>
+                </div>
+              </div>
+        </div>
+    </div>
+    <div class="static">
+        <a href="https://supportz.makemytrip.com/Mima/CustomerHelpAndSupport/">
+            <img src="chat.png" alt="">
+            <span>LIVE CHAT</span>
+            <p>for booking help</p>
+        </a>
+    </div>
+    <div class="container">
+        <div class="new-flex">
+            <div class="card w-40">
+                <div class="card-body">
+                  <h5 class="card-title"><b>Unlock Lesser Known Wonders of India</b></h5>
+                  <p class="card-text">
+                    <a href="https://www.makemytrip.com/tripideas/places/saputara">
+                        <img src="./Gujarat.jpg" alt="">
+                    </a>
+                    <a href="https://www.makemytrip.com/tripideas/places/narkanda" id="shimla">
+                        <img src="Shimla.jpg" alt="">
+                    </a>
+                    <a href="https://www.makemytrip.com/tripideas/places/yercaud">
+                        <img src="Tamil.jpg" alt="">
+                    </a>
+                    <a href="https://www.makemytrip.com/tripideas/places/dhanaulti">
+                        <img src="winter.jpg" alt="">
+                    </a>
+                  </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    </div>
+    <div class="container">
+        <footer>
+            <br>
+            <div class="aboutthem">
+                <h5><b>PRODUCT OFFERING</b></h5>
+                <a href="https://www.makemytrip.com/flights/">Flights</a>, <a href="https://www.makemytrip.com/international-flights/">International Flights</a>, <a href="https://www.makemytrip.com/charter-flights/">Charter Flights</a>, <a href="https://www.makemytrip.com/hotels/">Hotels</a>, <a href="https://www.makemytrip.com/hotels-international/">International Hotels</a>, <a href="https://www.makemytrip.com/homestays/">Homestays and Villas</a>, <a href="https://www.makemytrip.com/activities/">Activities</a>, <a href="https://www.makemytrip.com/holidays-india/">Holidays In India</a>, <a href="https://www.makemytrip.com/holidays-international/">International Holidays</a>, <a href="https://www.makemytrip.com/hotels/?ccde=ae">Book Hotels From UAE</a>, <a href="https://mybiz.makemytrip.com/v2/?intid=mmtfooter_productoffering">myBiz for Corporate Travel</a>, <a href="https://www.makemytrip.com/cabs/">Book Online Cabs</a>, <a href="https://www.makemytrip.com/bus-tickets/">Book Bus Tickets</a>, <a href="https://www.makemytrip.com/railways/">Book Train Tickets</a>, <a href="https://www.makemytrip.com/?ccde=us">Cheap Tickets to India</a>, <a href="https://www.makemytrip.com/flights/?ccde=us">Book Flights From US</a>, <a href="https://www.makemytrip.com/flights/?ccde=ae">Book Flights From UAE</a>, <a href="https://planner.makemytrip.com/?&intid=Homepage_Tab_Inspirock">Trip Planner</a>, <a href="https://www.makemytrip.com/gift-cards/">Gift Cards</a>, <a href="https://www.tripmoney.com/">Trip Money</a>, <a href="https://www.makemytrip.com/tripideas/">Trip Ideas</a>, <a href="https://www.makemytrip.com/tripideas/blog/?intid=mmtblog_footer">Travel Blog</a>, <a href="https://www.makemytrip.com/railways/PNR/">PNR Status</a>, <a href="https://advertising.makemytrip.com/ad/solutions/">MakeMyTrip Advertising Solutions</a>, <a href="https://www.makemytrip.com/car-rental/one-way-cab.html">One Way Cab</a>
+                <br>
+                <br>
+                <h5><b>MAKE MY TRIP</b></h5>
+                <a href="https://www.makemytrip.com/about-us/company_profile.php">About Us</a>, <a href="https://investors.makemytrip.com/investors/overview/default.aspx">Investor Relations</a>, <a href="https://careers.makemytrip.com/">Careers</a>, <a href="https://www.makemytrip.com/csr/mmt_foundation.html">MMT Foundation</a>, <a href="https://www.makemytrip.com/csr/csr_policy.html">CSR Policy</a>, <a href="https://mypartner.makemytrip.com/agent/home?&ts=2022-09-10T13:47:03+05:30">myPartner - Travel Agent Portal</a>, <a href="https://www.fxkart.com/makemytrip?utm_source=MMTAFF">Foreign Exchange</a>, <a href="https://www.makemytrip.com/hotels/hotelier-register.htm">List your hotel</a>, <a href="https://www.redbus.com/">Partners- Redbus</a>, <a href="https://www.goibibo.com/">Partners- Goibibo</a>, <a href="https://advertising.makemytrip.com/ad/solutions/">Advertise with Us</a>
+                <br><br>
+                <h5><b>IMPORTANT LINKS</b></h5>
+                <a href="https://www.makemytrip.com/holidays-india/ladakh-travel-packages.html">Ladakh Tour Packages</a>, <a href="">Andaman Tour Packages</a>, <a href="https://www.makemytrip.com/holidays-india/ladakh-travel-packages.html">Kashmir Tour Packages</a>, <a href="">Gujarat Tourism</a>, <a href="https://www.makemytrip.com/flights/rupsi-guwahati-cheap-airtickets.html">North East Tour Package</a>, <a href="">Golden Triangle Tour Packages</a>, <a href="https://www.makemytrip.com/hotels/delhi-hotels.html">Luxury Tour packages</a>, <a href="https://www.makemytrip.com/flights/new_delhi-chennai-cheap-airtickets.html">South India Tour Packages</a>, <a href="https://www.makemytrip.com/holidays-india/honeymoon-packages.html">International Honeymoon Packages</a>, <a href="https://www.makemytrip.com/holidays-india/honeymoon-packages.html">Andaman Honeymoon Packages</a>, <a href="https://www.makemytrip.com/holidays-india/honeymoon-packages.html">Kerala Honeymoon Packages</a>
+            </div>
+            <div class="s-footer">
+                <div class="why-book">
+                    <h5><b>Why Book Holidays with MakeMyTrip?</b></h5>
+                    <p>MakeMyTrip.com, India's leading online travel company, has a profound understanding of Indian consumers travel needs and preferences. It offers a wide range of holiday packages in India and across the world, catering to various segments of travellers. While the dynamic or customized tour and travel packages give consumers an option to create and design their own holiday, the fixed departure holiday packages have a pre-designed itinerary; thus ensuring there is something to meet the holiday needs of every kind of traveller.</p>
+                </div>
+                <div class="what-offers">
+                    <h5><b>What does MakeMyTrip Holidays Offer?</b></h5>
+                    <p>MakeMyTrip offers a hassle-free holiday wherein all your travel needs are taken care of. Be it your accommodation in comfortable hotels, convenient transfers, varied sightseeing options and an array of activities to choose from, delectable meals and niche experiences - the holiday packages are designed such to offer you an unparalleled experience. Be it popular destinations such as Andaman, Kerala, Rajasthan and Kashmir, or more offbeat ones like North East, Ladakh and Uttarakhand, there are tailor-made packages for destinations from all over India. From distinctive honeymoon packages to exclusive tour packages for women, from itineraries designed for solo travellers, families with kids and for those who are young at heart - MakeMyTrip has an answer to all our holiday needs.</p>
+                </div>
+                <div class="how-to-book">
+                    <h5><b>How to Book Holidays with MakeMyTrip?</b></h5>
+                    <p>The user-friendly MakeMyTrip App and website make it easy for enthusiastic travellers to plan and book a holiday simply at the click of a button. Just use the filters and select the city you want to visit along with your travel dates, travel duration, specific preferences, if any, on hotels, kind of holiday, etc. and MakeMyTrip offers you an extensive list of holiday packages to choose from. Pick any package that meets your needs. Else, you could also choose hotels of your choice, add sightseeing and activities to your list and have a package ready that best suits your requirement. You can choose to book your tour packages offline by dropping a query or chatting with our travel experts for immediate support. With MakeMyTrip, planning and buying your ideal holiday has never been easier.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="social-links">
+        <div class="twitter-facebook">
+            <a href="https://twitter.com/makemytrip/"><img src="twitter.png" alt=""></a>
+            <a href="https://www.facebook.com/makemytrip/">
+                <img src="facebook.png" alt="">
+            </a>
+        </div>
+        <div class="back-to-top">
+            <a href="#tp">[Back to top]</a>
+        </div>
+        <div class="copyright">
+            <p>&copy; MAKEMYTRIP PVT. LTD.</p>
+            <p>COUNTRY INDIA USA UAE</p>
+            <P>This Website is solely created for</P>
+            <p> a Project Purpose</p>
+        </div>
+    </div>
+</body>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</html>
